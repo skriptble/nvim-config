@@ -216,3 +216,7 @@ nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>u :CtrlPBuffer<CR>
 " Open most recently used files
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
+
+" git gutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
