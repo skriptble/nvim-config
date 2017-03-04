@@ -54,7 +54,7 @@ source $HOME/.config/nvim/config/defaults.vim
 source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/lvsthw.vim
 
-let g:python_host_prog = '/usr/bin/python2.7'
+let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 autocmd insertenter * set nornu
