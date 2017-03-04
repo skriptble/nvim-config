@@ -46,6 +46,8 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'guns/vim-clojure-highlight'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'fishbullet/deoplete-ruby'
+Plug 'artur-shaik/vim-javacomplete2'
 call plug#end()
 
 source $HOME/.config/nvim/config/defaults.vim

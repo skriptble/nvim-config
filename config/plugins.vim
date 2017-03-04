@@ -6,6 +6,13 @@ nnoremap <Leader>u :CtrlPBuffer<CR>
 " Open most recently used files
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
+" fzf
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+nnoremap <Leader>g :Files<CR>
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 " let g:deoplete#auto_completion_start_length = 1
@@ -114,6 +121,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_experimental = 1
 let g:go_auto_sameids = 1
+let g:go_list_type = "locationlist"
 " let g:go_term_enabled = 1
 " let g:go_term_mode = "split"
 au FileType go autocmd! BufWritePost * GoBuild
