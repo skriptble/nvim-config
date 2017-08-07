@@ -4,7 +4,11 @@ set background=dark
 let g:gruvbox_sign_column='dark0'
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark='medium'
-colorscheme gruvbox
+colorscheme hybrid_reverse
+
+let g:enable_bold_font = 1
+hi clear SpellBad
+hi SpellBad cterm=underline gui=underline guifg=#cc6666  guisp=Red
 
 let mapleader = "\<SPACE>"
 let maplocalleader = ","
@@ -39,7 +43,7 @@ set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 set modeline            " Enable modeline.
-set esckeys             " Cursor keys in insert mode.
+" set esckeys             " Cursor keys in insert mode.
 set linespace=0         " Set line-spacing to minimum.
 set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
 

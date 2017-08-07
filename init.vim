@@ -30,7 +30,7 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-clang'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
-Plug 'critiqjo/lldb.nvim'
+Plug 'dbgx/lldb.nvim'
 Plug 'millermedeiros/vim-esformatter'
 Plug 'b4b4r07/vim-hcl'
 Plug 'mattn/emmet-vim'
@@ -48,6 +48,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'artur-shaik/vim-javacomplete2'
+Plug 'rakr/vim-one'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rhysd/vim-color-spring-night'
+Plug 'racer-rust/vim-racer'
+Plug 'mattn/webapi-vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 source $HOME/.config/nvim/config/defaults.vim
@@ -55,6 +62,7 @@ source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/lvsthw.vim
 
 let g:python_host_prog = '/usr/local/bin/python'
+let g:python_host_prog = '/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 autocmd insertenter * set nornu
@@ -64,5 +72,8 @@ autocmd vimenter * setlocal spell
 
 " True colors!
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 echo ">^.^<"

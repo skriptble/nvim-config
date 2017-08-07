@@ -11,7 +11,7 @@ nnoremap <Leader>f :CtrlPMRUFiles<CR>
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
-nnoremap <Leader>g :Files<CR>
+nnoremap <Leader>p :Files<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -175,3 +175,8 @@ call gitgutter#highlight#define_highlights()
 
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-e>"
+
+" C++
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_cpp_compiler = 'gcc'
+let g:syntastic_cpp_compiler_options = '-std=c++14'
