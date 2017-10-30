@@ -124,7 +124,7 @@ let g:go_auto_sameids = 1
 let g:go_list_type = "locationlist"
 " let g:go_term_enabled = 1
 " let g:go_term_mode = "split"
-au FileType go autocmd! BufWritePost * GoBuild
+" au FileType go autocmd! BufWritePost * GoBuild
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>gce <Plug>(go-callees)
 au FileType go nmap <Leader>gcr <Plug>(go-callers)
@@ -144,6 +144,7 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>rt <Plug>(go-run-tab)
 au FileType go nmap <Leader>rs <Plug>(go-run-split)
 au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+au FileType go nmap <Leader>m <Plug>(go-metalinter)
 " vim-go can be an Asshole, too, just like App Engine
 let g:go_autodetect_gopath = 0
 " don't touch my asm, asshole vim-go/asmfmt

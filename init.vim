@@ -30,7 +30,7 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-clang'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
-Plug 'dbgx/lldb.nvim'
+" Plug 'dbgx/lldb.nvim'
 Plug 'millermedeiros/vim-esformatter'
 Plug 'b4b4r07/vim-hcl'
 Plug 'mattn/emmet-vim'
@@ -61,8 +61,8 @@ source $HOME/.config/nvim/config/defaults.vim
 source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/lvsthw.vim
 
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python_host_prog = '/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python'
+" let g:python_host_prog = '/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python'
+let g:python_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 autocmd insertenter * set nornu
