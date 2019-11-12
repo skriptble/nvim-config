@@ -55,6 +55,8 @@ Plug 'rhysd/vim-color-spring-night'
 Plug 'racer-rust/vim-racer'
 Plug 'mattn/webapi-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript'
 call plug#end()
 
 source $HOME/.config/nvim/config/defaults.vim
