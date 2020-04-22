@@ -120,11 +120,13 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_experimental = 1
-let g:go_auto_sameids = 1
+let g:go_rename_command = 'gopls'
+" let g:go_auto_sameids = 1
 let g:go_list_type = "locationlist"
 " let g:go_term_enabled = 1
 " let g:go_term_mode = "split"
 " au FileType go autocmd! BufWritePost * GoBuild
+au FileType go nmap <silent> ,, <Plug>(go-sameids-toggle)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>gce <Plug>(go-callees)
 au FileType go nmap <Leader>gcr <Plug>(go-callers)
@@ -137,6 +139,7 @@ au FileType go nmap <Leader>i <Plug>(go-install)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 au FileType go nmap <Leader>dx <Plug>(go-def)
+au FileType go nmap <Leader>dd <Plug>(go-decls-dir)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
