@@ -16,12 +16,21 @@ nnoremap <Leader>p :Files<CR>
 " deoplete
 let g:deoplete#enable_at_startup = 1
 " let g:deoplete#auto_completion_start_length = 1
+set completeopt+=noselect
+set completeopt-=preview
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+inoremap <silent><expr> <TAB>
+                \ pumvisible() ? "\<C-n>" :
+                \ <SID>check_back_space() ? "\<TAB>" :
+                \ deoplete#mappings#manual_complete()
+                function! s:check_back_space() abort "{{{
+                let col = col('.') - 1
+                return !col || getliine('.')[col - 1] =~ \'s'
+                endfunction"}}}
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
-" deoplete-go
-let g:deoplete#sources#go#align_class = 1
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache = 1
+" echodoc
+let g:echodoc#enable_at_startup = 1
 
 " deoplete-clang
 let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
@@ -56,7 +65,7 @@ let g:deoplete#enable_at_startup = 1
 "   let g:deoplete#omni#input_patterns = {}
 " endif
 " let g:deoplete#disable_auto_complete = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " deoplete tab-complete
 " inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
@@ -121,6 +130,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_experimental = 1
 let g:go_rename_command = 'gopls'
+let g:go_metalinter_enabled = [
+\   'govet', 'golint', 'errcheck', 'staticcheck', 'unused', 'gosimple',
+\   'structcheck', 'varcheck', 'ineffassign', 'deadcode', 'typecheck',
+\   'misspell', 'interfacer', 'stylecheck', 'gocyclo', 'goconst']
 " let g:go_auto_sameids = 1
 let g:go_list_type = "locationlist"
 " let g:go_term_enabled = 1
@@ -148,6 +161,8 @@ au FileType go nmap <Leader>rt <Plug>(go-run-tab)
 au FileType go nmap <Leader>rs <Plug>(go-run-split)
 au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
 au FileType go nmap <Leader>m <Plug>(go-metalinter)
+au FileType go nmap <Leader>l <Plug>(go-lint)
+au FileType go nmap <Leader>v <Plug>(go-vet)
 " vim-go can be an Asshole, too, just like App Engine
 let g:go_autodetect_gopath = 0
 " don't touch my asm, asshole vim-go/asmfmt
@@ -182,5 +197,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-e>"
 
 " C++
 let g:syntastic_cpp_checkers = ['gcc']
-let g:syntastic_cpp_compiler = 'gcc'
+" let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_compiler_options = '-std=c++14'
+
+" Yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable

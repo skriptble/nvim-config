@@ -1,1 +1,1 @@
-/Users/kristoferbrandow/.config/nvim/plugged/gocode/nvim/autoload/gocomplete.vim
+/Users/skriptble/.config/nvim/plugged/gocode/nvim/autoload/gocomplete.vim

@@ -2,10 +2,8 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'Raimondi/delimitMate'
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'tag': 'v1.23' }
 Plug 'morhetz/gruvbox'
-Plug 'ervandew/supertab'
 Plug 'benekastah/neomake'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
@@ -26,7 +24,6 @@ Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-clang'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
@@ -57,6 +54,8 @@ Plug 'mattn/webapi-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript'
+Plug 'Shougo/echodoc.vim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 source $HOME/.config/nvim/config/defaults.vim
