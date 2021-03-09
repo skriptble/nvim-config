@@ -2,7 +2,7 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'Raimondi/delimitMate'
-Plug 'fatih/vim-go', { 'tag': 'v1.23' }
+Plug 'fatih/vim-go', { 'tag': 'v1.24' }
 Plug 'morhetz/gruvbox'
 Plug 'benekastah/neomake'
 Plug 'scrooloose/syntastic'
