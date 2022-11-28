@@ -4,7 +4,8 @@ set background=dark
 let g:gruvbox_sign_column='dark0'
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark='medium'
-colorscheme hybrid_reverse
+let g:hybrid_transparent_background = 1
+colorscheme hybrid_material
 
 let g:enable_bold_font = 1
 hi clear SpellBad
