@@ -14,20 +14,20 @@ omap <leader><tab> <plug>(fzf-maps-o)
 nnoremap <Leader>p :Files<CR>
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 " let g:deoplete#auto_completion_start_length = 1
-set completeopt+=noselect
-set completeopt-=preview
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-inoremap <silent><expr> <TAB>
-                \ pumvisible() ? "\<C-n>" :
-                \ <SID>check_back_space() ? "\<TAB>" :
-                \ deoplete#mappings#manual_complete()
-                function! s:check_back_space() abort "{{{
-                let col = col('.') - 1
-                return !col || getliine('.')[col - 1] =~ \'s'
-                endfunction"}}}
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" set completeopt+=noselect
+" set completeopt-=preview
+" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+" inoremap <silent><expr> <TAB>
+"                 \ pumvisible() ? "\<C-n>" :
+"                 \ <SID>check_back_space() ? "\<TAB>" :
+"                 \ deoplete#mappings#manual_complete()
+"                 function! s:check_back_space() abort "{{{
+"                 let col = col('.') - 1
+"                 return !col || getliine('.')[col - 1] =~ \'s'
+"                 endfunction"}}}
+" inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " echodoc
 let g:echodoc#enable_at_startup = 1
@@ -169,7 +169,7 @@ let g:go_autodetect_gopath = 0
 let g:go_asmfmt_autosave = 0
 
 " Welcome to Vim Airlines!
-let g:airline_theme="gruvbox"
+let g:airline_theme="hybrid"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1

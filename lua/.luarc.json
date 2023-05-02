@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.workspace.library": [
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/stable",
+        "/usr/local/Cellar/neovim/0.8.1/share/nvim/runtime",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/LuaSnip",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/mason.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/skriptble/start/Comment.nvim",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/skriptble/start/nvim-cmp",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/skriptble/start/nvim-treesitter",
+        "/Users/kristoferbrandow/.local/share/nvim/site/pack/skriptble/start/nvim-treesitter-context",
+        "${3rd}/luassert/library"
+    ]
+}
