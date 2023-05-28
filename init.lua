@@ -83,6 +83,8 @@ require('packer').startup(function(use)
 
     use "mbbill/undotree" -- Exposes the Vim undotree
 
+    use 'barrett-ruth/live-server.nvim' -- live-server
+
     if is_bootstrap then
         require('packer').sync()
     end
@@ -170,7 +172,7 @@ require('gitsigns').setup {
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'go', 'lua', 'rust', 'typescript', 'help', 'vim', 'query' },
+    ensure_installed = { 'c', 'go', 'lua', 'rust', 'typescript', 'html', 'javascript', 'css', 'vimdoc', 'vim', 'query', 'glsl' },
 
     highlight = { enable = true },
     indent = { enable = true},
@@ -292,6 +294,9 @@ local servers = {
     gopls = {},
     rust_analyzer = {},
     tsserver = {},
+    html = {
+      cmd = {"html-languageserver", "--stdio"},
+    },
 
     lua_ls = {
         Lua = {
@@ -307,6 +312,8 @@ require('neodev').setup()
 -- nnvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+-- Enable (broadcasting) snippet compatibility for completion
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Setup mason so it can manage external tooling
 require('mason').setup()
@@ -330,6 +337,13 @@ mason_lspconfig.setup_handlers {
 
 -- Turn on lsp status information
 require('fidget').setup()
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
+-- GLSL Language Server
+require'lspconfig'.glslls.setup{}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -391,6 +405,8 @@ require("vista")
 
 -- [[ undotree Configuration ]]
 require("undotree")
+
+require('live-server').setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

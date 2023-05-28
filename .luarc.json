@@ -1,0 +1,26 @@
+{
+    "workspace.library": [
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/stable",
+        "/opt/homebrew/Cellar/neovim/0.9.0/share/nvim/runtime/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/opt/playground/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/cmp_luasnip/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/Comment.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/fidget.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/gitsigns.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/live-server.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/LuaSnip/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/mason.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/neodev.nvim/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-cmp/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-treesitter/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context/lua",
+        "/Users/skriptble/.local/share/nvim/site/pack/packer/start/packer.nvim/lua",
+        "/Users/skriptble/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}
