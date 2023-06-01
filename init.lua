@@ -345,6 +345,12 @@ require'lspconfig'.html.setup {
 -- GLSL Language Server
 require'lspconfig'.glslls.setup{}
 
+-- Nim Language Server
+require'lspconfig'.nim_langserver.setup{}
+
+-- Zig Language Server
+require'lspconfig'.zls.setup{}
+
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
