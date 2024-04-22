@@ -24,7 +24,12 @@ require('packer').startup(function(use)
             -- Additional lua configuration, makes nvim stuff amazing
             'folke/neodev.nvim',
         },
-    }
+  }
+
+  use {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+  }
 
     use { -- Autocompletion
         'hrsh7th/nvim-cmp',
@@ -54,7 +59,7 @@ require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- use 'nvim-lualine/lualine.nvim' -- Fancier statusline
-    use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
+    use {'lukas-reineke/indent-blankline.nvim', main = 'ibl'} -- Add indentation guides even on blank lines
     use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
     use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
     use 'kristijanhusak/vim-hybrid-material' -- Hybrid Material color theme
@@ -84,6 +89,12 @@ require('packer').startup(function(use)
     use "mbbill/undotree" -- Exposes the Vim undotree
 
     use 'barrett-ruth/live-server.nvim' -- live-server
+
+    use 'vrischmann/tree-sitter-templ' -- templ treesitter plugin
+
+    use 'terrastruct/d2-vim' -- D2 language plugin
+
+    use 'pangloss/vim-javascript' -- JavaScript plugin
 
     if is_bootstrap then
         require('packer').sync()
@@ -151,9 +162,10 @@ require('Comment').setup()
 
 -- Enable `lukas_reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
-require('indent_blankline').setup {
-    char = '|',
-    show_trailing_blankline_indent = false,
+require('ibl').setup {
+    indent = {
+      char = '|',
+    },
 }
 
 -- Gitsigns
@@ -175,7 +187,7 @@ require('nvim-treesitter.configs').setup {
     ensure_installed = { 'c', 'go', 'lua', 'rust', 'typescript', 'html', 'javascript', 'css', 'vimdoc', 'vim', 'query', 'glsl' },
 
     highlight = { enable = true },
-    indent = { enable = true},
+    indent = { enable = false },
     incremental_selection = {
         enable = true,
         keymaps = {
@@ -230,6 +242,14 @@ require('nvim-treesitter.configs').setup {
         },
     },
 }
+vim.api.nvim_create_augroup('TSJS', { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+  group = 'TSJS',
+  pattern = { 'javascript' },
+  callback = function(ev)
+    require('nvim-treesitter.configs').commands.TSBufEnable.run("indent", ev.bufnr, "javascript")
+  end,
+})
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
@@ -297,6 +317,7 @@ local servers = {
     html = {
       cmd = {"html-languageserver", "--stdio"},
     },
+    templ = {},
 
     lua_ls = {
         Lua = {
@@ -413,6 +434,30 @@ require("vista")
 require("undotree")
 
 require('live-server').setup()
+
+-- [[ Templ Configuration ]]
+require("templ")
+
+-- [[ Templ Treesitter Configuration ]]
+local treesitter_parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+treesitter_parser_config.templ = {
+  install_info = {
+    url = "https://github.com/vrischmann/tree-sitter-templ.git",
+    files = {"src/parser.c", "src/scanner.c"},
+    branch = "master",
+  },
+}
+
+vim.treesitter.language.register('templ', 'templ')
+
+treesitter_parser_config.d2 = {
+  install_info = {
+    url = "https://git.pleshevski.ru/pleshevskiy/tree-sitter-d2",
+    revision = "main",
+    files = { "src/parser.c", "src/scanner.cc" },
+  },
+  filetype = "d2",
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
