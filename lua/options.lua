@@ -35,11 +35,18 @@ vim.o.laststatus = 2
 -- Change the way that incorrectly spelled words appear
 vim.api.nvim_set_hl(0, 'SpellBad', {underline = true})
 
+-- Fix highlight problems in NeoVim 0.11
+-- https://github.com/vim-airline/vim-airline/issues/2693
+vim.api.nvim_set_hl(0, 'StatusLine', {})
+vim.api.nvim_set_hl(0, 'StatusLineNC', {})
+vim.api.nvim_set_hl(0, 'TabLine', {})
+vim.api.nvim_set_hl(0, 'WinBar', {})
+
 -- Enable spell checking
 vim.o.spell = true
 
 -- Configure past toggling
-vim.o.pastetoggle = '<F2>'
+-- vim.o.pastetoggle = '<F2>'
 
 -- Show key sqeuence as it's being typed on the last line
 vim.o.showcmd = true

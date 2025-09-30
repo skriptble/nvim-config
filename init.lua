@@ -67,7 +67,7 @@ require('packer').startup(function(use)
     use "Raimondi/delimitMate" -- Makes using delimiters easier
     use {
       "fatih/vim-go",
-      tag="v1.28"
+      tag="v1.29"
     } -- Makes Go easier to use within Vim
     use "tpope/vim-abolish" -- Enables updating many variants of words with ease
     use "vim-airline/vim-airline" -- Status line plugin
@@ -313,7 +313,7 @@ local servers = {
     clangd = {},
     gopls = {},
     rust_analyzer = {},
-    tsserver = {},
+    -- tsserver = {},
     html = {
       cmd = {"html-languageserver", "--stdio"},
     },
@@ -346,31 +346,25 @@ mason_lspconfig.setup {
     ensure_installed = vim.tbl_keys(servers),
 }
 
-mason_lspconfig.setup_handlers {
-    function(server_name)
-        require('lspconfig')[server_name].setup {
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = servers[server_name],
-        }
-    end,
-}
-
 -- Turn on lsp status information
 require('fidget').setup()
 
-require'lspconfig'.html.setup {
+vim.lsp.config('html', {
   capabilities = capabilities,
-}
+})
+vim.lsp.enable('html')
 
 -- GLSL Language Server
-require'lspconfig'.glslls.setup{}
+vim.lsp.config('glslls', {})
+vim.lsp.enable('glslls')
 
 -- Nim Language Server
-require'lspconfig'.nim_langserver.setup{}
+vim.lsp.config('nim_langserver', {})
+vim.lsp.enable('nim_langserver')
 
 -- Zig Language Server
-require'lspconfig'.zls.setup{}
+vim.lsp.enable('zls', {})
+vim.lsp.enable('zls')
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
