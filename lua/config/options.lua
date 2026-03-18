@@ -1,5 +1,6 @@
 -- Set highlight on search
-vim.o.hlsearch = false
+-- When there's a previous search, highlight it
+vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -21,26 +22,17 @@ vim.o.smartcase = true
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
--- Set colorscheme
+-- Set GUI colors
 vim.o.termguicolors = true
-vim.cmd [[colorscheme hybrid_reverse]]
-vim.g.enable_bold_font = true -- Uses bold font for functions and the like
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menu,menuone,noselect,noinsert'
 
 -- Ensures we have a status line
 vim.o.laststatus = 2
 
 -- Change the way that incorrectly spelled words appear
 vim.api.nvim_set_hl(0, 'SpellBad', {underline = true})
-
--- Fix highlight problems in NeoVim 0.11
--- https://github.com/vim-airline/vim-airline/issues/2693
-vim.api.nvim_set_hl(0, 'StatusLine', {})
-vim.api.nvim_set_hl(0, 'StatusLineNC', {})
-vim.api.nvim_set_hl(0, 'TabLine', {})
-vim.api.nvim_set_hl(0, 'WinBar', {})
 
 -- Enable spell checking
 vim.o.spell = true
@@ -66,15 +58,6 @@ vim.o.shiftwidth = 4
 -- New lines use the indenting of the previous lines
 vim.o.copyindent = true
 
--- When there's a previous search, highlight it
-vim.o.hlsearch = true
-
--- Override ignorecase if the search pattern contains an upper case character
-vim.o.smartcase = true
-
--- Ignores case in search patterns
-vim.o.ignorecase = true
-
 -- Performs  auto indenting when starting a new line
 vim.o.smartindent = true
 
@@ -99,8 +82,8 @@ vim.o.sidescrolloff = 5
 -- Use relative instead of absolute line numbers
 vim.o.relativenumber = true
 
--- Set the complete options
-vim.o.completeopt = 'menu,menuone,noselect,noinsert'
-
 -- Continue comment marker in new lines.
 vim.opt.formatoptions:append("rol")
+
+-- Diagnostic configuration
+vim.diagnostic.config({ virtual_text = true })

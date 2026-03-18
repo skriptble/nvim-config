@@ -1,6 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -24,6 +21,8 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 -- Clear the highlighting of the previous search
 vim.keymap.set('n', ',/', ':nohlsearch<CR>', { silent = true})
 
--- FZF Keymaps
-vim.keymap.set('n', '<Leader>p', ':Files<CR>')
-vim.keymap.set('n', '<Leader>u', ':Buffers<CR>')
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
