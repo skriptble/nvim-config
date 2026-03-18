@@ -4,7 +4,7 @@ return {
     branch = "master",
     build = ":TSUpdate",
     dependencies = {
-        "nvim-treesitter/nvim-treesitter-textobjects",
+        { "nvim-treesitter/nvim-treesitter-textobjects", branch = "master" },
     },
     opts = {
       -- Add languages to be installed here that you want installed for treesitter
