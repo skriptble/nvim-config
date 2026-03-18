@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/skriptble/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/skriptble/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/share/lua/5.1/?.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/share/lua/5.1/?/init.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/lib/luarocks/rocks-5.1/?.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -94,6 +94,17 @@ _G.packer_plugins = {
     path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\nå\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\21formatters_by_ft\1\0\1\21formatters_by_ft\0\bphp\1\0\1\bphp\0\1\2\0\0\17php_cs_fixer\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
+  ["d2-vim"] = {
+    loaded = true,
+    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/d2-vim",
+    url = "https://github.com/terrastruct/d2-vim"
+  },
   delimitMate = {
     loaded = true,
     path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/delimitMate",
@@ -123,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["live-server.nvim"] = {
+    loaded = true,
+    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/live-server.nvim",
+    url = "https://github.com/barrett-ruth/live-server.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -178,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/skriptble/.local/share/nvim/site/pack/packer/opt/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
+  ["tree-sitter-templ"] = {
+    loaded = true,
+    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/tree-sitter-templ",
+    url = "https://github.com/vrischmann/tree-sitter-templ"
+  },
   undotree = {
     loaded = true,
     path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/undotree",
@@ -212,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-hybrid-material",
     url = "https://github.com/kristijanhusak/vim-hybrid-material"
+  },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
   },
   ["vim-repeat"] = {
     loaded = true,
@@ -251,11 +277,15 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\nå\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\21formatters_by_ft\1\0\1\21formatters_by_ft\0\bphp\1\0\1\bphp\0\1\2\0\0\17php_cs_fixer\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
-vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 vim.cmd [[ packadd playground ]]
+vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
