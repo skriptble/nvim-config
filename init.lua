@@ -31,10 +31,12 @@ require('packer').startup(function(use)
     tag = 'legacy',
   }
 
-  use { -- Autocompletion
-    'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-  }
+    use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
+
+    use { -- Autocompletion
+        'hrsh7th/nvim-cmp',
+        requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    }
 
   use { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -367,9 +369,9 @@ vim.lsp.config('html', {
 })
 vim.lsp.enable('html')
 
--- GLSL Language Server
-vim.lsp.config('glslls', {})
-vim.lsp.enable('glslls')
+-- GLSL Analyzer
+vim.lsp.config('glsl_analyzer', {})
+vim.lsp.enable('glsl_analyzer')
 
 -- Nim Language Server
 vim.lsp.config('nim_langserver', {})

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/share/lua/5.1/?.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/share/lua/5.1/?/init.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/lib/luarocks/rocks-5.1/?.lua;/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/skriptble/.cache/nvim/packer_hererocks/2.1.1753364724/lib/lua/5.1/?.so"
+local package_path_str = "/Users/kristoferbrandow/.cache/nvim/packer_hererocks/2.1.1763318511/share/lua/5.1/?.lua;/Users/kristoferbrandow/.cache/nvim/packer_hererocks/2.1.1763318511/share/lua/5.1/?/init.lua;/Users/kristoferbrandow/.cache/nvim/packer_hererocks/2.1.1763318511/lib/luarocks/rocks-5.1/?.lua;/Users/kristoferbrandow/.cache/nvim/packer_hererocks/2.1.1763318511/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/kristoferbrandow/.cache/nvim/packer_hererocks/2.1.1763318511/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,202 +76,202 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   LuaSnip = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["conform.nvim"] = {
     config = { "\27LJ\2\nå\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\21formatters_by_ft\1\0\1\21formatters_by_ft\0\bphp\1\0\1\bphp\0\1\2\0\0\17php_cs_fixer\nsetup\fconform\frequire\0" },
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
   ["d2-vim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/d2-vim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/d2-vim",
     url = "https://github.com/terrastruct/d2-vim"
   },
   delimitMate = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/delimitMate",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/delimitMate",
     url = "https://github.com/Raimondi/delimitMate"
   },
   ["fidget.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
   fzf = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/fzf",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["live-server.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/live-server.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/live-server.nvim",
     url = "https://github.com/barrett-ruth/live-server.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neodev.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/neodev.nvim",
     url = "https://github.com/folke/neodev.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-context"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-treesitter-textobjects"] = {
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     load_after = {},
     loaded = true,
     needs_bufread = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/opt/playground",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/opt/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
   ["tree-sitter-templ"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/tree-sitter-templ",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/tree-sitter-templ",
     url = "https://github.com/vrischmann/tree-sitter-templ"
   },
   undotree = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/undotree",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
   ["vim-abolish"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-abolish",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-abolish",
     url = "https://github.com/tpope/vim-abolish"
   },
   ["vim-airline"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-airline",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-airline-themes"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-go"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-go",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
   },
   ["vim-hybrid-material"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-hybrid-material",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-hybrid-material",
     url = "https://github.com/kristijanhusak/vim-hybrid-material"
   },
   ["vim-javascript"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-rhubarb"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-sleuth"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-sleuth",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
   },
   ["vim-speeddating"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-speeddating",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-speeddating",
     url = "https://github.com/tpope/vim-speeddating"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-surround",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
   ["vim-trailing-whitespace"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vim-trailing-whitespace",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vim-trailing-whitespace",
     url = "https://github.com/bronson/vim-trailing-whitespace"
   },
   ["vista.vim"] = {
     loaded = true,
-    path = "/Users/skriptble/.local/share/nvim/site/pack/packer/start/vista.vim",
+    path = "/Users/kristoferbrandow/.local/share/nvim/site/pack/packer/start/vista.vim",
     url = "https://github.com/liuchengxu/vista.vim"
   }
 }
