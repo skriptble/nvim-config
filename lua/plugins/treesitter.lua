@@ -35,6 +35,7 @@ return {
         require("nvim-treesitter").install({
           "c", "go", "lua", "rust", "typescript", "html",
           "javascript", "css", "vimdoc", "vim", "query", "glsl",
+          "php",
         })
       end
 
