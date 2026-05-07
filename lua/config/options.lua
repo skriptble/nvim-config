@@ -11,6 +11,9 @@ vim.o.mouse = 'a'
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Enable linebreak ensuring we split on a breakat character
+vim.o.linebreak = true
+
 -- Save undo history
 vim.o.undofile = true
 
@@ -32,7 +35,7 @@ vim.o.completeopt = 'menu,menuone,noselect,noinsert'
 vim.o.laststatus = 2
 
 -- Change the way that incorrectly spelled words appear
-vim.api.nvim_set_hl(0, 'SpellBad', {underline = true})
+vim.api.nvim_set_hl(0, 'SpellBad', { underline = true })
 
 -- Enable spell checking
 vim.o.spell = true
