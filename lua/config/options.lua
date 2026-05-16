@@ -90,3 +90,10 @@ vim.opt.formatoptions:append("rol")
 
 -- Diagnostic configuration
 vim.diagnostic.config({ virtual_text = true })
+
+-- Add Python provider
+vim.g.python3_host_prog = vim.fn.expand('~/.virtualenvs/neovim/bin/python')
+
+-- Disable unused providers
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
